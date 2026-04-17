@@ -35,7 +35,34 @@ export default function HomePage() {
               {t("hero.desc")}
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
+            {/* Product Quick Specs */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+              <div className="bg-surface-container-high/50 p-4 border-l-2 border-[#FFCE00]">
+                <p className="font-mono text-[10px] text-stone-500 uppercase tracking-widest">{t("product.standard")}</p>
+                <p className="font-mono text-xs text-white mt-1">JB/T 6430-2002</p>
+              </div>
+              <div className="bg-surface-container-high/50 p-4 border-l-2 border-[#FFCE00]">
+                <p className="font-mono text-[10px] text-stone-500 uppercase tracking-widest">{t("product.power_range")}</p>
+                <p className="font-mono text-xs text-white mt-1">5.5 - 315 kW</p>
+              </div>
+              <div className="bg-surface-container-high/50 p-4 border-l-2 border-[#FFCE00]">
+                <p className="font-mono text-[10px] text-stone-500 uppercase tracking-widest">{t("product.voltage")}</p>
+                <p className="font-mono text-xs text-white mt-1">380V / 50Hz</p>
+              </div>
+              <div className="bg-surface-container-high/50 p-4 border-l-2 border-[#FFCE00]">
+                <p className="font-mono text-[10px] text-stone-500 uppercase tracking-widest">{t("product.models_count")}</p>
+                <p className="font-mono text-xs text-white mt-1">16 Models</p>
+              </div>
+            </div>
+
+            {/* Testing Note */}
+            <div className="bg-[#FFCE00]/10 border border-[#FFCE00]/30 p-4 mt-4">
+              <p className="font-mono text-xs text-stone-400 leading-relaxed">
+                {t("product.testing_note")}
+              </p>
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-4">
               <Link
                 to="/specs"
                 className="bg-[#FFCE00] text-black font-mono font-bold text-sm px-8 py-4 uppercase tracking-widest border-b-4 border-r-4 border-black hover:bg-[#efc100] hover:border-b-2 hover:border-r-2 hover:translate-y-[2px] hover:translate-x-[2px] active:translate-y-[4px] active:translate-x-[4px] active:border-b-0 active:border-r-0 transition-all duration-100 flex items-center gap-3"

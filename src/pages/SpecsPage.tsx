@@ -144,6 +144,66 @@ export default function SpecsPage() {
           )}
         </section>
 
+        {/* Cable Selection Reference Table */}
+        <section className="mb-16">
+          <div className="flex items-center gap-4 border-b-4 border-on-surface pb-4 mb-8">
+            <h2 className="font-sans font-black text-3xl md:text-4xl tracking-tight uppercase text-on-surface">
+              {t("cable.title")}
+            </h2>
+          </div>
+
+          <div className="bg-[#FFCE00]/10 border border-[#FFCE00]/30 p-4 mb-6">
+            <p className="font-mono text-xs text-on-surface leading-relaxed">
+              {t("cable.note")}
+            </p>
+          </div>
+
+          <div className="overflow-x-auto bg-surface-container-low border-2 border-outline">
+            <table className="w-full font-mono text-xs">
+              <thead>
+                <tr className="bg-inverse-surface text-inverse-on-surface">
+                  <th className="px-4 py-3 text-left text-xs uppercase tracking-widest border-b-4 border-outline">
+                    {t("cable.model")}
+                  </th>
+                  <th className="px-4 py-3 text-center text-xs uppercase tracking-widest border-b-4 border-outline">
+                    {t("cable.voltage")}
+                  </th>
+                  <th className="px-4 py-3 text-center text-xs uppercase tracking-widest border-b-4 border-outline">
+                    {t("cable.frequency")}
+                  </th>
+                  <th className="px-4 py-3 text-center text-xs uppercase tracking-widest border-b-4 border-outline">
+                    {t("cable.current")}
+                  </th>
+                  <th className="px-4 py-3 text-center text-xs uppercase tracking-widest border-b-4 border-outline">
+                    {t("cable.wire_size")}
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="text-on-surface">
+                {compressorData.map((row, i) => (
+                  <tr
+                    key={i}
+                    className="border-b-2 border-outline-variant bg-surface transition-colors hover:bg-inverse-surface"
+                  >
+                    <td className="px-4 py-3 font-bold">
+                      {row.hp} / {row.kw}
+                      {row.kw >= 250 && (
+                        <span className="text-xs bg-[#FFCE00] text-black px-2 ml-2 font-bold">
+                          HIGH CAPACITY
+                        </span>
+                      )}
+                    </td>
+                    <td className="px-4 py-3 text-center">{row.voltage}</td>
+                    <td className="px-4 py-3 text-center">{row.frequency}</td>
+                    <td className="px-4 py-3 text-center font-bold">{row.maxCurrent}</td>
+                    <td className="px-4 py-3 text-center">{row.wireSize}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
         {/* Pipe Pressure Drop Tables */}
         <section className="mb-16">
           <div className="flex items-center gap-4 border-b-4 border-on-surface pb-4 mb-8">

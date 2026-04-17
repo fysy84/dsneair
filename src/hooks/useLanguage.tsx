@@ -453,24 +453,117 @@ const translations: Record<string, Record<Language, string>> = {
   "control.title": { en: "Control Panel Operation", zh: "控制面板操作" },
   "control.panel_desc": { en: "Due to design requirements or stability considerations, this product may use control panels manufactured by different vendors. Operating procedures may vary by manufacturer. Please refer to the specific control panel operation manual and inverter manual provided with this product.", zh: "由于设计要求或稳定性考虑，本产品可能使用不同制造商生产的控制面板。操作程序可能因制造商而异。请参阅本产品附带的特定控制面板操作手册和变频器手册。" },
 
-  // Operating Procedures
-  "operation.title": { en: "Operating Procedures", zh: "操作程序" },
-  "operation.initial_title": { en: "Initial Installation", zh: "初始安装" },
-  "operation.pre_start_title": { en: "Pre-Start Checklist", zh: "启动前检查清单" },
-  "operation.pre_start_1": { en: "Check that all protective devices are properly installed", zh: "检查所有保护装置是否正确安装" },
-  "operation.pre_start_2": { en: "Verify all electrical connections are secure", zh: "确认所有电气连接牢固" },
-  "operation.pre_start_3": { en: "Ensure compressor oil level is adequate", zh: "确保压缩机油位充足" },
-  "operation.pre_start_4": { en: "Check that air outlet valve is in closed position", zh: "检查排气阀是否处于关闭位置" },
-  "operation.pre_start_5": { en: "Confirm power supply voltage matches specifications", zh: "确认电源电压符合规格" },
-  "operation.start_title": { en: "Starting Procedure", zh: "启动程序" },
-  "operation.start_1": { en: "Turn on the main power switch", zh: "打开主电源开关" },
-  "operation.start_2": { en: "Wait for system to complete self-diagnosis", zh: "等待系统完成自诊断" },
-  "operation.start_3": { en: "Press the START button", zh: "按下启动按钮" },
-  "operation.start_4": { en: "Gradually open the air outlet valve", zh: "逐渐打开排气阀" },
-  "operation.stop_title": { en: "Stopping Procedure", zh: "停机程序" },
-  "operation.stop_1": { en: "Press the STOP button", zh: "按下停机按钮" },
-  "operation.stop_2": { en: "Allow system to unload", zh: "让系统卸荷" },
-  "operation.stop_3": { en: "Close the air outlet valve", zh: "关闭排气阀" },
-  "operation.stop_4": { en: "Turn off the main power switch", zh: "关闭主电源开关" },
+  // Product Overview
+  "product.full_name": { en: "Permanent Magnet Variable Frequency / Fixed Frequency Screw Air Compressor", zh: "永磁变频 / 工频螺杆式空压机" },
+  "product.standard": { en: "Compliance Standard", zh: "执行标准" },
+  "product.standard_value": { en: "JB/T 6430-2002 General Oil-Injected Screw Air Compressors", zh: "JB/T 6430-2002《一般喷油螺杆空气压缩机》" },
+  "product.power_range": { en: "Power Range", zh: "功率范围" },
+  "product.power_value": { en: "7.5 HP/5.5 kW to 430 HP/315 kW", zh: "7.5 HP/5.5 kW 至 430 HP/315 kW" },
+  "product.models_count": { en: "16 Models Available", zh: "共 16 个型号" },
+  "product.voltage": { en: "Rated Voltage", zh: "额定电压" },
+  "product.voltage_value": { en: "380V / 50Hz", zh: "380V / 50Hz" },
+  "product.testing_note": { en: "Every unit undergoes rigorous inspection and testing before shipment. Factory-preset parameters are optimized for performance — do not adjust without authorization.", zh: "所有产品出厂前均经严格检验与测试。出厂预设参数已优化，请勿随意更改。" },
+  "product.warning_preset": { en: "All factory-preset parameters have been optimized for performance. Do not adjust without authorization.", zh: "出厂预设参数已优化性能，请勿在未经授权情况下调整。" },
+
+  // Cable Selection Table
+  "cable.title": { en: "Cable Selection Reference", zh: "电缆选型参考" },
+  "cable.note": { en: "Recommended: YJV copper-core XLPE-insulated PVC-sheathed cable. Refer to IEC 60364-5-523 before installation.", zh: "推荐使用 YJV 铜芯交联聚氯乙烯绝缘聚氯乙烯护套电缆，安装前请参阅 IEC 60364-5-523 标准。" },
+  "cable.model": { en: "Model (HP/kW)", zh: "型号 (HP/kW)" },
+  "cable.voltage": { en: "Voltage (V)", zh: "电压 (V)" },
+  "cable.frequency": { en: "Frequency (Hz)", zh: "频率 (Hz)" },
+  "cable.current": { en: "Max Current (A)", zh: "最大电流 (A)" },
+  "cable.wire_size": { en: "Wire Size (mm²)", zh: "电线尺寸 (mm²)" },
+
+  // Forklift Requirements
+  "forklift.title": { en: "Forklift Requirements", zh: "叉车要求" },
+  "forklift.75kw": { en: "≤ 75 kW: 3-ton forklift", zh: "≤ 75 kW：3 吨叉车" },
+  "forklift.90_132kw": { en: "90-132 kW: 5-ton forklift", zh: "90-132 kW：5 吨叉车" },
+  "forklift.160_250kw": { en: "160-250 kW: 10-ton forklift", zh: "160-250 kW：10 吨叉车" },
+  "forklift.crane": { en: "Overhead crane: Insert channel steel into forklift slots, use sling spreader", zh: "行车起吊：在叉车孔内插入槽钢，使用吊索撑开器" },
+
+  // Installation Site
+  "site.title": { en: "Installation Site Requirements", zh: "安装场地要求" },
+  "site.ventilation": { en: "Ensure adequate ventilation indoors — poor ventilation may cause high temperature shutdown", zh: "室内需保证良好通风，否则可能导致高温停机" },
+  "site.temp_min": { en: "Inlet/ambient temperature must be ≥ 0°C — contact manufacturer if below this threshold", zh: "进气/环境温度不得低于 0°C，低于此温度须联系制造商" },
+  "site.cool_clean": { en: "Place in cool, clean environment — install intake duct if necessary", zh: "放置于空气凉爽、清洁的环境中，必要时安装吸气管道" },
+  "site.uneven": { en: "If ground is uneven or sloped, consult manufacturer", zh: "地面不平坦或倾斜时须向制造商咨询" },
+
+  // Pipe Sizing
+  "pipe.title": { en: "Pipe Sizing & Pressure Drop", zh: "配管尺寸与压降" },
+  "pipe.principle": { en: "Gas flow causes friction resistance in straight pipes and local resistance at fittings, valves, elbows — resulting in pressure loss", zh: "气体在管内流动时，直线管段产生摩擦阻力；阀门、三通、弯头、变径管等处产生局部阻力，从而导致压力损失" },
+  "pipe.formula": { en: "Actual pressure drop = Table value × Pipe length ÷ (100 × Compression ratio), Compression ratio = Gauge pressure + 1", zh: "实际压力降 = 表值 × 管长 ÷ (100 × 压缩比)，压缩比 = 表压力 + 1" },
+  "pipe.local": { en: "Add local pressure losses from elbows, reducers, tees, valves — refer to engineering handbooks", zh: "弯头、异径接管、三通接头、阀门等产生的局部压力损失需另行查阅相关手册" },
+
+  // System Configuration
+  "sysconfig.title": { en: "Recommended System Configuration", zh: "推荐系统配置" },
+  "sysconfig.flow": { en: "Air Compressor → Air Receiver → Refrigerated Dryer → Class C Filter → T-class Filter → A-class Filter → Air Consumption Point", zh: "空压机 → 储气罐 → 冷干机 → C级过滤器 → T级过滤器 → A级过滤器 → 用气端" },
+
+  // Safety - Electrical
+  "safety.elec_wire_size": { en: "Select correct wire gauge based on power — undersized wires cause overheating and fire hazard", zh: "根据功率正确选择电源线径，线径过小会导致高温烧毁" },
+  "safety.elec_dedicated": { en: "Use dedicated power system — avoid parallel connection with other loads", zh: "建议空压机单独使用一套电力系统，避免与其他负载并联" },
+  "safety.elec_current": { en: "Motor current must not exceed 15% of rated current", zh: "电动机运转电流不得超过额定电流的 15%" },
+  "safety.elec_imbalance": { en: "Three-phase current imbalance: max difference between highest and lowest phase must not exceed 5%", zh: "三相电流不平衡时，最高与最低相电流差不得超过 5%" },
+  "safety.elec_voltage_drop": { en: "Voltage drop must not be lower than 5% of rated voltage", zh: "电压降不得低于额定电压的 5%" },
+  "safety.elec_ground": { en: "Grounding wire must be installed — do not connect to air pipes or water pipes", zh: "必须安装接地线，且不可接在空气输送管或冷却水管上" },
+  "safety.elec_breaker": { en: "Install appropriate air switch (circuit breaker) based on power rating", zh: "根据功率配置适当空气开关（断路器）" },
+
+  // Safety - Operation
+  "safety.op_skin": { en: "Never direct compressed air at body or use for cleaning clothing", zh: "禁止将压缩空气对准人体或用于衣物除尘" },
+  "safety.op_hearing": { en: "Wear hearing protection in areas with sound pressure ≥ 90 dB(A)", zh: "声压级达到或超过 90 dB(A) 的环境须佩戴护耳器" },
+  "safety.op_doors": { en: "All doors and panels must remain closed during operation", zh: "运行过程中所有箱体门必须保持关闭" },
+  "safety.op_remote": { en: "Remote-controlled machines must display warning: 'This machine may start without warning'", zh: "远程控制的机器必须标注警告：此机器由远程控制，可能在无警告的情况下起动" },
+  "safety.op_flammable": { en: "Do not operate near flammable gases, vapors, or particles (e.g., paint solvents)", zh: "不得在易燃气体、蒸汽或颗粒（如涂漆溶剂）附近运行" },
+  "safety.op_limits": { en: "Do not operate below or above rated limits", zh: "不得低于或高于额定限值运行" },
+  "safety.op_eye": { en: "Wear safety glasses when using compressed air for cleaning", zh: "使用压缩空气清洁设备时必须佩戴防护眼镜" },
+
+  // Safety - Maintenance Shutdown Procedure
+  "safety.shutdown_title": { en: "Mandatory Shutdown Procedure Before Maintenance", zh: "维修前必须执行的停机程序" },
+  "t_safety.shutdown_1": { en: "Stop the compressor", zh: "停止运行压缩机" },
+  "t_safety.shutdown_2": { en: "Close the air outlet valve", zh: "关闭空气出口阀门" },
+  "t_safety.shutdown_3": { en: "Press the emergency stop button", zh: "按下紧急停机按钮" },
+  "t_safety.shutdown_4": { en: "Disconnect power and attach warning sign at switch", zh: "切断电源，在电源开关处挂上警告标志" },
+  "t_safety.shutdown_5": { en: "Completely depressurize the compressor", zh: "为压缩机完全降压" },
+  "t_safety.shutdown_6": { en: "Close the shut-off valve to supply system", zh: "关闭空压机通向供气系统的截止阀" },
+
+  // Safety - Prohibitions
+  "safety.prohibit_title": { en: "Strictly Prohibited", zh: "严禁事项" },
+  "safety.prohibit_parts": { en: "Do not remove nuts, oil plugs, or other parts while running or under pressure", zh: "禁止在机器运行或带压状态下拆卸螺母、加油塞或其他零件" },
+  "safety.prohibit_flammable_clean": { en: "Do not use gasoline, kerosene, or other flammable solvents for cleaning", zh: "禁止使用汽油、煤油等可燃溶剂清洗零部件" },
+  "safety.prohibit_flame": { en: "Do not use open flame to inspect machine or pressure vessels", zh: "禁止使用明火检查机器或压力容器内部" },
+  "safety.prohibit_weld": { en: "Do not weld or perform heat operations near lubrication system", zh: "禁止在润滑油系统附近进行焊接或其他发热操作" },
+
+  // Operating Procedures - Initial Installation
+  "oper.title": { en: "Operating Procedures — Initial Installation", zh: "操作程序 — 初始安装" },
+  "oper.pre_check": { en: "Pre-Installation Checklist", zh: "安装前检查" },
+  "oper.step_1": { en: "Confirm inlet/ambient temperature ≥ 0°C", zh: "确认进气/环境温度 ≥ 0°C" },
+  "oper.step_2": { en: "Remove red transport bolts from airend, motor, and oil separator (reinstall if reshipping)", zh: "拆除主机、电机及油分桶的红色运输固定螺栓（若需重新运输须重新安装）" },
+  "oper.step_3": { en: "Check electrical connections are standardized, cable terminals are secure", zh: "检查电气连接是否规范，电缆连接端子是否牢固可靠" },
+  "oper.step_4": { en: "Check pneumatic connections are reliable", zh: "检查气路连接是否可靠" },
+  "oper.step_5": { en: "Ensure no personnel remain in danger zones near motor or compressor before testing", zh: "调试前确保无人滞留在电机或压缩机旁的危险区域" },
+  "oper.step_6": { en: "Keep all doors and panels closed during operation", zh: "运行时必须关闭所有门和面板" },
+  "oper.step_7": { en: "Check motor rotation direction on first power-on — press emergency stop immediately if incorrect (may cause severe damage)", zh: "首次接电须检查驱动电机转向，转向错误立即按紧急停机按钮（否则可能严重损坏压缩机）" },
+  "oper.step_8": { en: "After powering on, all indicator lights and LCD will illuminate for self-diagnosis", zh: "接通总电源后，所有指示灯和液晶显示器将点亮进行显示自检" },
+  "oper.step_9": { en: "Machine has automatic operation monitoring — will auto-stop on fault", zh: "机器配有自动运行监测系统，故障时自动停机" },
+  "oper.step_10": { en: "Press START button to begin operation", zh: "按下启动按钮开始运行" },
+
+  // Maintenance - Extended Schedule
+  "maint.100h": { en: "Every 100 hours (or within first week)", zh: "每 100 小时（或一周内）" },
+  "maint.100h_items": { en: "Clean oil filter primary screen and oil tank coarse filter screen", zh: "清洗油过滤器一级滤网和油箱粗滤网" },
+  "maint.300h": { en: "Every 300 hours", zh: "每 300 小时" },
+  "maint.300h_items": { en: "Clean air filter element (clean, dry, soak in same grade oil); check/clean unloading valve, minimum pressure valve, auto drain valve", zh: "清洗空压机过滤器芯子（清洗后吹干并浸泡同型号机油）；清洗或检查减荷阀、最低压力阀、自动放空阀" },
+  "maint.1000h": { en: "Every 1,000 hours", zh: "每 1,000 小时" },
+  "maint.1000h_items": { en: "Replace oil filter paper element; check safety valve, thermostatic valve, pressure regulator operation", zh: "更换油过滤纸质滤芯；检查安全阀、温控阀、压力调节器工作状态" },
+  "maint.3000h": { en: "Every 3,000 hours", zh: "每 3,000 小时" },
+  "maint.3000h_items": { en: "Change oil based on emulsification, impurities, viscosity; clean oil cooler (every 4 months minimum)", zh: "根据油的乳化程度、杂质、粘度变化酌情换油；清洁油冷却器（一般要求每 4 个月）" },
+  "maint.10000h": { en: "Every 10,000 hours", zh: "每 10,000 小时" },
+  "maint.10000h_items": { en: "Major overhaul: replace radial bearings and thrust bearings if necessary", zh: "大修：必要时更换径向轴承和止推轴承" },
+
+  // Warranty
+  "warranty.title": { en: "Warranty & After-Sales", zh: "保修与售后" },
+  "warranty.authorized": { en: "Use only authorized original parts", zh: "只使用经授权认可的原装零部件" },
+  "warranty.unauthorized": { en: "Damage caused by unauthorized parts is not covered by warranty", zh: "使用未经授权零部件导致的损坏不在保修范围内" },
+  "warranty.testing": { en: "All products undergo strict inspection before shipment with certificate of conformity", zh: "所有产品出厂前均经严格检验，附有合格证" },
+  "warranty.upgrade": { en: "Product specifications may be upgraded without notice — actual product为准", zh: "产品规格可能升级恕不另行通知，以实物为准" },
+  "warranty.consult": { en: "For extreme temperature, humidity, or cooling air conditions, consult after-sales service", zh: "极端温度、湿度或冷却空气条件下的维护间隔，请向售后服务中心咨询" },
 
 };

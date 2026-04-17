@@ -1,4 +1,4 @@
-import { AlertTriangle, Zap, Shield, HardHat, Wind, Thermometer, Wrench, Ban, CheckCircle, AlertOctagon } from "lucide-react";
+import { AlertTriangle, Zap, Shield, HardHat, Wind, Thermometer, Wrench, Ban, CheckCircle, AlertOctagon, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 
 const electricalSafetyItems = [
@@ -37,6 +37,25 @@ const electricalSafetyItems = [
     title: "t_install.elec_breaker_title",
     desc: "t_install.elec_breaker_desc",
     severity: "info",
+  },
+  // Additional from manual
+  {
+    icon: Zap,
+    title: "safety.elec_current",
+    desc: "safety.elec_current",
+    severity: "warning",
+  },
+  {
+    icon: Zap,
+    title: "safety.elec_imbalance",
+    desc: "safety.elec_imbalance",
+    severity: "danger",
+  },
+  {
+    icon: Zap,
+    title: "safety.elec_voltage_drop",
+    desc: "safety.elec_voltage_drop",
+    severity: "warning",
   },
 ];
 
@@ -250,6 +269,75 @@ export default function InstallationPage() {
           </div>
         </section>
 
+        {/* Installation Site Requirements */}
+        <section className="mb-20">
+          <div className="flex items-center gap-4 border-b-4 border-on-surface pb-4 mb-10">
+            <h2 className="font-sans font-black text-3xl md:text-4xl tracking-tight uppercase text-on-surface">
+              {t("site.title")}
+            </h2>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="bg-surface-container-low p-6 border-l-4 border-[#FFCE00]">
+              <h3 className="font-sans font-bold text-sm uppercase text-on-surface mb-3 flex items-center gap-2">
+                <Wind className="h-4 w-4 text-[#FFCE00]" />
+                {t("site.ventilation")}
+              </h3>
+            </div>
+            <div className="bg-surface-container-low p-6 border-l-4 border-[#ba1a1a]">
+              <h3 className="font-sans font-bold text-sm uppercase text-[#ba1a1a] mb-3 flex items-center gap-2">
+                <Thermometer className="h-4 w-4" />
+                {t("site.temp_min")}
+              </h3>
+            </div>
+            <div className="bg-surface-container-low p-6 border-l-4 border-[#FFCE00]">
+              <h3 className="font-sans font-bold text-sm uppercase text-on-surface mb-3 flex items-center gap-2">
+                <Wind className="h-4 w-4 text-[#FFCE00]" />
+                {t("site.cool_clean")}
+              </h3>
+            </div>
+            <div className="bg-surface-container-low p-6 border-l-4 border-[#FFCE00]">
+              <h3 className="font-sans font-bold text-sm uppercase text-on-surface mb-3 flex items-center gap-2">
+                <AlertTriangle className="h-4 w-4 text-[#FFCE00]" />
+                {t("site.uneven")}
+              </h3>
+            </div>
+          </div>
+        </section>
+
+        {/* Recommended System Configuration */}
+        <section className="mb-20">
+          <div className="flex items-center gap-4 border-b-4 border-on-surface pb-4 mb-10">
+            <h2 className="font-sans font-black text-3xl md:text-4xl tracking-tight uppercase text-on-surface">
+              {t("sysconfig.title")}
+            </h2>
+          </div>
+
+          <div className="bg-surface-container-low p-8 border-l-4 border-[#FFCE00]">
+            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+              {[
+                { label: "Air Compressor", icon: "⚙️" },
+                { label: "Air Receiver", icon: "🛢️" },
+                { label: "Refrigerated Dryer", icon: "❄️" },
+                { label: "C Filter", icon: "🔽" },
+                { label: "T Filter", icon: "🔽" },
+                { label: "A Filter", icon: "🔽" },
+                { label: "Air Point", icon: "✓" },
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-4">
+                  <div className="bg-surface-container-high p-4 text-center">
+                    <p className="font-mono text-xs text-on-surface-variant uppercase">{item.label}</p>
+                  </div>
+                  {i < 6 && <ArrowRight className="h-5 w-5 text-[#FFCE00] shrink-0" />}
+                </div>
+              ))}
+            </div>
+            <p className="font-mono text-xs text-on-surface-variant mt-6 text-center">
+              {t("sysconfig.flow")}
+            </p>
+          </div>
+        </section>
+
         {/* Electrical Safety */}
         <section className="mb-20">
           <div className="flex items-center gap-4 border-b-4 border-on-surface pb-4 mb-10">
@@ -319,22 +407,22 @@ export default function InstallationPage() {
           <div className="flex items-center gap-4 border-b-4 border-on-surface pb-4 mb-10">
             <Wrench className="h-7 w-7 text-[#FFCE00]" />
             <h2 className="font-sans font-black text-3xl md:text-4xl tracking-tight uppercase text-on-surface">
-              {t("install.procedures_title")}
+              {t("oper.title")}
             </h2>
           </div>
 
           <div className="space-y-3">
             {[
-              "t_install.proc_1",
-              "t_install.proc_2",
-              "t_install.proc_3",
-              "t_install.proc_4",
-              "t_install.proc_5",
-              "t_install.proc_6",
-              "t_install.proc_7",
-              "t_install.proc_8",
-              "t_install.proc_9",
-              "t_install.proc_10",
+              "oper.step_1",
+              "oper.step_2",
+              "oper.step_3",
+              "oper.step_4",
+              "oper.step_5",
+              "oper.step_6",
+              "oper.step_7",
+              "oper.step_8",
+              "oper.step_9",
+              "oper.step_10",
             ].map((step, i) => (
               <div
                 key={i}
@@ -346,6 +434,17 @@ export default function InstallationPage() {
                 <p className="font-mono text-sm text-on-surface-variant">{t(step)}</p>
               </div>
             ))}
+          </div>
+
+          {/* Important Warning */}
+          <div className="mt-8 bg-[#ba1a1a]/10 border border-[#ba1a1a] p-6 border-l-4 border-[#ba1a1a]">
+            <h4 className="font-sans font-bold text-sm uppercase text-[#ba1a1a] mb-2 flex items-center gap-2">
+              <AlertOctagon className="h-4 w-4" />
+              Critical Safety Note
+            </h4>
+            <p className="font-mono text-xs text-on-surface-variant">
+              {t("oper.step_7")}
+            </p>
           </div>
         </section>
 
@@ -496,7 +595,7 @@ export default function InstallationPage() {
         </section>
 
         {/* Emergency Stop Procedure */}
-        <section className="bg-error-container/20 p-8 border-l-4 border-[#ba1a1a]">
+        <section className="bg-error-container/20 p-8 border-l-4 border-[#ba1a1a] mb-16">
           <h3 className="font-sans font-bold text-lg uppercase text-[#ba1a1a] mb-4 flex items-center gap-2">
             <AlertOctagon className="h-5 w-5" />
             {t("safety.emergency_title")}
@@ -504,6 +603,64 @@ export default function InstallationPage() {
           <p className="font-mono text-sm text-on-surface-variant leading-relaxed">
             {t("safety.emergency_desc")}
           </p>
+        </section>
+
+        {/* Mandatory Shutdown Procedure */}
+        <section className="mb-20">
+          <div className="flex items-center gap-4 border-b-4 border-on-surface pb-4 mb-10">
+            <h2 className="font-sans font-black text-3xl md:text-4xl tracking-tight uppercase text-on-surface">
+              {t("safety.shutdown_title")}
+            </h2>
+          </div>
+
+          <div className="space-y-3">
+            {[
+              { step: "1", text: "t_safety.shutdown_1" },
+              { step: "2", text: "t_safety.shutdown_2" },
+              { step: "3", text: "t_safety.shutdown_3" },
+              { step: "4", text: "t_safety.shutdown_4" },
+              { step: "5", text: "t_safety.shutdown_5" },
+              { step: "6", text: "t_safety.shutdown_6" },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="flex gap-4 bg-surface-container-low p-4 border-l-4 border-[#ba1a1a] hover:border-[#FFCE00] transition-colors duration-300"
+              >
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center bg-[#ba1a1a] text-xs font-black text-white">
+                  {item.step}
+                </span>
+                <p className="font-mono text-sm text-on-surface-variant">{t(item.text)}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Strictly Prohibited */}
+        <section className="mb-20">
+          <div className="flex items-center gap-4 border-b-4 border-on-surface pb-4 mb-10">
+            <h2 className="font-sans font-black text-3xl md:text-4xl tracking-tight uppercase text-[#ba1a1a]">
+              {t("safety.prohibit_title")}
+            </h2>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="bg-[#ba1a1a]/10 p-6 border-l-4 border-[#ba1a1a] flex items-start gap-3">
+              <Ban className="h-5 w-5 text-[#ba1a1a] shrink-0 mt-0.5" />
+              <p className="font-mono text-sm text-on-surface-variant">{t("safety.prohibit_parts")}</p>
+            </div>
+            <div className="bg-[#ba1a1a]/10 p-6 border-l-4 border-[#ba1a1a] flex items-start gap-3">
+              <Ban className="h-5 w-5 text-[#ba1a1a] shrink-0 mt-0.5" />
+              <p className="font-mono text-sm text-on-surface-variant">{t("safety.prohibit_flammable_clean")}</p>
+            </div>
+            <div className="bg-[#ba1a1a]/10 p-6 border-l-4 border-[#ba1a1a] flex items-start gap-3">
+              <Ban className="h-5 w-5 text-[#ba1a1a] shrink-0 mt-0.5" />
+              <p className="font-mono text-sm text-on-surface-variant">{t("safety.prohibit_flame")}</p>
+            </div>
+            <div className="bg-[#ba1a1a]/10 p-6 border-l-4 border-[#ba1a1a] flex items-start gap-3">
+              <Ban className="h-5 w-5 text-[#ba1a1a] shrink-0 mt-0.5" />
+              <p className="font-mono text-sm text-on-surface-variant">{t("safety.prohibit_weld")}</p>
+            </div>
+          </div>
         </section>
       </div>
     </div>
