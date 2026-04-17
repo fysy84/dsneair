@@ -51,9 +51,9 @@ export default function HomePage() {
             <div className="h-full border-l-4 border-stone-800 pl-6">
               <div className="relative h-[500px] w-full overflow-hidden">
                 <img
-                  src="/images/banner_compressor.png"
-                  alt="DSNE AIR Variable Frequency Screw Air Compressor - 3D Cutaway View"
-                  className="absolute inset-0 w-full h-full object-cover grayscale opacity-50"
+                  src="/images/dsneair-compressor.png"
+                  alt="DSNE AIR Variable Frequency Screw Air Compressor - Product View"
+                  className="absolute inset-0 w-full h-full object-contain"
                 />
                 <div className="absolute bottom-8 left-8 bg-black/80 backdrop-blur-md p-6 border-l-4 border-[#FFCE00]">
                   <p className="font-mono text-[#FFCE00] text-xs uppercase tracking-widest mb-2">
