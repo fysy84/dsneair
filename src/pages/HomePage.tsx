@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/hooks/useLanguage";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 
 export default function HomePage() {
   const { t } = useLanguage();
@@ -261,6 +261,30 @@ export default function HomePage() {
                 >
                   {t("cta.safety")}
                 </Link>
+              </div>
+              {/* PDF Downloads */}
+              <div className="mt-8 pt-8 border-t-2 border-outline-variant">
+                <p className="font-mono text-xs text-on-surface-variant uppercase tracking-widest mb-4">
+                  {t("download.manual")}
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href="/2025-CN.pdf"
+                    download="DSNE-AIR-说明书-2025.pdf"
+                    className="flex items-center gap-2 bg-surface-container-high hover:bg-surface-container-low text-on-surface font-mono text-xs px-4 py-2 border border-outline transition-colors"
+                  >
+                    <Download className="h-3 w-3" />
+                    {t("download.chinese")}
+                  </a>
+                  <a
+                    href="/2025-EN.pdf"
+                    download="DSNE-AIR-Instruction-Manual-2025.pdf"
+                    className="flex items-center gap-2 bg-surface-container-high hover:bg-surface-container-low text-on-surface font-mono text-xs px-4 py-2 border border-outline transition-colors"
+                  >
+                    <Download className="h-3 w-3" />
+                    {t("download.english")}
+                  </a>
+                </div>
               </div>
             </div>
           </div>

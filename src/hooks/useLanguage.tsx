@@ -412,4 +412,65 @@ const translations: Record<string, Record<Language, string>> = {
   "t_support.filter_harsh": { en: "In harsh environments (mines, ceramic factories, cotton mills): replace every 500 hours", zh: "恶劣环境（矿山、陶瓷厂、棉纺厂）：每 500 小时更换" },
   "t_support.filter_clearance": { en: "Internal clearances only allow particles < 15 microns — clogged filter causes serious damage", zh: "内部间隙仅允许 < 15 微米的颗粒通过——过滤器堵塞会造成严重损坏" },
 
+  // PDF Downloads
+  "download.manual": { en: "Download Manual", zh: "下载说明书" },
+  "download.chinese": { en: "Chinese Version (PDF)", zh: "中文版 (PDF)" },
+  "download.english": { en: "English Version (PDF)", zh: "英文版 (PDF)" },
+  "download.file_size": { en: "File Size", zh: "文件大小" },
+
+  // Additional Safety Items
+  "safety.legend_caution": { en: "Caution", zh: "注意" },
+  "safety.legend_warning": { en: "Warning", zh: "警示" },
+  "safety.legend_prohibit": { en: "Prohibited", zh: "禁止" },
+  "safety.breathe_title": { en: "Breathing Air Warning", zh: "呼吸空气警告" },
+  "safety.breathe_desc": { en: "Air from the compressor is NOT suitable for breathing. Additional filtration and treatment is required for breathing-quality air.", zh: "压缩机排出的空气不适合呼吸。使用呼吸质量的空气需要额外的过滤和处理。" },
+  "safety.skin_contact_title": { en: "Skin Contact Warning", zh: "皮肤接触警告" },
+  "safety.skin_contact_desc": { en: "Do not direct compressed air at skin or allow it to contact skin. Do not use compressed air to clean clothing.", zh: "请勿将压缩空气对准皮肤或让空气接触皮肤。请勿使用压缩空气清洁衣物。" },
+  "safety.hearing_title": { en: "Hearing Protection Required", zh: "需要听力保护" },
+  "safety.hearing_desc": { en: "Personnel staying in areas where sound pressure level reaches or exceeds 90 dB(A) must wear hearing protection.", zh: "呆在声压级达到或超过 90 分贝 (A) 的区域的人员必须佩戴护耳器。" },
+  "safety.noise_check_title": { en: "Regular Noise Inspection", zh: "定期噪音检查" },
+  "safety.noise_check_desc": { en: "Check regularly: all protective devices are installed, all hoses/pipes are in good condition, no leaks, all fasteners are tight.", zh: "定期检查：所有保护装置均已安装到位，所有软管/管道状况良好，无泄漏，所有紧固件均已旋紧。" },
+  "safety.flammable_title": { en: "Flammable Gas Warning", zh: "易燃气体警告" },
+  "safety.flammable_desc": { en: "Do not operate machine where flammable gases, vapors, or particles (such as paint solvents) may be present.", zh: "请勿在可能存在易燃气体、蒸汽或颗粒（如涂漆溶剂）的环境中运行机器。" },
+  "safety.remote_warning_title": { en: "Remote Control Warning", zh: "远程控制警告" },
+  "safety.remote_warning_desc": { en: "This machine may start without warning when controlled remotely. Ensure no personnel are in the area before powering on.", zh: "此机器可能在无警告的情况下通过远程控制启动。在通电前确保该区域没有人员。" },
+  "safety.water_cooling_title": { en: "Water-Cooled Machine Safety", zh: "水冷机器安全" },
+  "safety.water_cooling_desc": { en: "For water-cooled machines, safety devices must be set according to the cooling water inlet pressure.", zh: "对于水冷机器，安全装置必须根据冷却水进口压力设定。" },
+  "safety.grounding_title": { en: "Grounding Requirement", zh: "接地要求" },
+  "safety.grounding_desc": { en: "The machine must be grounded. Do not connect grounding wire directly to air supply pipes or cooling water pipes.", zh: "机器必须接地。请勿将接地线直接接在空气输送管或冷却水管上。" },
+  "safety.emergency_title": { en: "Emergency Stop Procedure", zh: "紧急停机程序" },
+  "safety.emergency_desc": { en: "Before any maintenance: stop compressor, press emergency button, disconnect power, depressurize system, open/lock main switch.", zh: "任何维护前：停止压缩机，按下紧急按钮，切断电源，卸压系统，打开/锁定主开关。" },
+
+  // Cooler Maintenance
+  "cooler.title": { en: "Cooler Maintenance", zh: "冷却器维护" },
+  "cooler.frequency": { en: "Maintenance Frequency", zh: "维护频率" },
+  "cooler.method_air": { en: "Use dry compressed air at 0.4 MPa or higher, blow from top to bottom", zh: "使用 0.4 MPa 以上的干燥压缩空气，从上往下吹" },
+  "cooler.method_diesel": { en: "For diesel units: blow from outside to inside, then clean fan cover", zh: "柴动机组：从外往里吹，然后清理导风罩" },
+  "cooler.harsh_env": { en: "In harsh environments: if cooler surface is covered with oil, use carbon cleaner", zh: "恶劣环境：冷却器表面满是油污时，使用除碳清洗剂" },
+  "cooler.clean_interval": { en: "Clean every 4 months to ensure heat dissipation", zh: "每 4 个月清洗一次以确保散热效果" },
+
+  // Control Panel Section
+  "control.title": { en: "Control Panel Operation", zh: "控制面板操作" },
+  "control.panel_desc": { en: "Due to design requirements or stability considerations, this product may use control panels manufactured by different vendors. Operating procedures may vary by manufacturer. Please refer to the specific control panel operation manual and inverter manual provided with this product.", zh: "由于设计要求或稳定性考虑，本产品可能使用不同制造商生产的控制面板。操作程序可能因制造商而异。请参阅本产品附带的特定控制面板操作手册和变频器手册。" },
+
+  // Operating Procedures
+  "operation.title": { en: "Operating Procedures", zh: "操作程序" },
+  "operation.initial_title": { en: "Initial Installation", zh: "初始安装" },
+  "operation.pre_start_title": { en: "Pre-Start Checklist", zh: "启动前检查清单" },
+  "operation.pre_start_1": { en: "Check that all protective devices are properly installed", zh: "检查所有保护装置是否正确安装" },
+  "operation.pre_start_2": { en: "Verify all electrical connections are secure", zh: "确认所有电气连接牢固" },
+  "operation.pre_start_3": { en: "Ensure compressor oil level is adequate", zh: "确保压缩机油位充足" },
+  "operation.pre_start_4": { en: "Check that air outlet valve is in closed position", zh: "检查排气阀是否处于关闭位置" },
+  "operation.pre_start_5": { en: "Confirm power supply voltage matches specifications", zh: "确认电源电压符合规格" },
+  "operation.start_title": { en: "Starting Procedure", zh: "启动程序" },
+  "operation.start_1": { en: "Turn on the main power switch", zh: "打开主电源开关" },
+  "operation.start_2": { en: "Wait for system to complete self-diagnosis", zh: "等待系统完成自诊断" },
+  "operation.start_3": { en: "Press the START button", zh: "按下启动按钮" },
+  "operation.start_4": { en: "Gradually open the air outlet valve", zh: "逐渐打开排气阀" },
+  "operation.stop_title": { en: "Stopping Procedure", zh: "停机程序" },
+  "operation.stop_1": { en: "Press the STOP button", zh: "按下停机按钮" },
+  "operation.stop_2": { en: "Allow system to unload", zh: "让系统卸荷" },
+  "operation.stop_3": { en: "Close the air outlet valve", zh: "关闭排气阀" },
+  "operation.stop_4": { en: "Turn off the main power switch", zh: "关闭主电源开关" },
+
 };

@@ -379,6 +379,132 @@ export default function InstallationPage() {
             </div>
           </div>
         </section>
+
+        {/* Legend Section */}
+        <section className="mb-20">
+          <div className="flex items-center gap-4 border-b-4 border-on-surface pb-4 mb-10">
+            <h2 className="font-sans font-black text-3xl md:text-4xl tracking-tight uppercase text-on-surface">
+              Safety Legend
+            </h2>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            <div className="bg-surface-container-low p-6 border-l-4 border-[#FFCE00] flex items-center gap-4">
+              <div className="w-12 h-12 bg-[#FFCE00] flex items-center justify-center">
+                <AlertTriangle className="h-6 w-6 text-black" />
+              </div>
+              <div>
+                <p className="font-sans font-bold text-sm uppercase text-on-surface">{t("safety.legend_caution")}</p>
+                <p className="font-mono text-xs text-on-surface-variant">Caution / 注意</p>
+              </div>
+            </div>
+            <div className="bg-surface-container-low p-6 border-l-4 border-[#ba1a1a] flex items-center gap-4">
+              <div className="w-12 h-12 bg-[#ba1a1a] flex items-center justify-center">
+                <AlertOctagon className="h-6 w-6 text-white" />
+              </div>
+              <div>
+                <p className="font-sans font-bold text-sm uppercase text-on-surface">{t("safety.legend_warning")}</p>
+                <p className="font-mono text-xs text-on-surface-variant">Warning / 警示</p>
+              </div>
+            </div>
+            <div className="bg-surface-container-low p-6 border-l-4 border-outline flex items-center gap-4">
+              <div className="w-12 h-12 bg-outline flex items-center justify-center">
+                <Ban className="h-6 w-6 text-on-surface" />
+              </div>
+              <div>
+                <p className="font-sans font-bold text-sm uppercase text-on-surface">{t("safety.legend_prohibit")}</p>
+                <p className="font-mono text-xs text-on-surface-variant">Prohibited / 禁止</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Additional Safety Instructions */}
+        <section className="mb-20">
+          <div className="flex items-center gap-4 border-b-4 border-on-surface pb-4 mb-10">
+            <h2 className="font-sans font-black text-3xl md:text-4xl tracking-tight uppercase text-on-surface">
+              Safety Precautions — Detailed Guidelines
+            </h2>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="bg-surface-container-low p-6 border-l-4 border-[#ba1a1a]">
+              <h3 className="font-sans font-bold text-sm uppercase text-[#ba1a1a] mb-3">
+                {t("safety.breathe_title")}
+              </h3>
+              <p className="font-mono text-xs text-on-surface-variant leading-relaxed">
+                {t("safety.breathe_desc")}
+              </p>
+            </div>
+            <div className="bg-surface-container-low p-6 border-l-4 border-[#ba1a1a]">
+              <h3 className="font-sans font-bold text-sm uppercase text-[#ba1a1a] mb-3">
+                {t("safety.skin_contact_title")}
+              </h3>
+              <p className="font-mono text-xs text-on-surface-variant leading-relaxed">
+                {t("safety.skin_contact_desc")}
+              </p>
+            </div>
+            <div className="bg-surface-container-low p-6 border-l-4 border-[#FFCE00]">
+              <h3 className="font-sans font-bold text-sm uppercase text-[#FFCE00] mb-3">
+                {t("safety.hearing_title")}
+              </h3>
+              <p className="font-mono text-xs text-on-surface-variant leading-relaxed">
+                {t("safety.hearing_desc")}
+              </p>
+            </div>
+            <div className="bg-surface-container-low p-6 border-l-4 border-[#FFCE00]">
+              <h3 className="font-sans font-bold text-sm uppercase text-[#FFCE00] mb-3">
+                {t("safety.noise_check_title")}
+              </h3>
+              <p className="font-mono text-xs text-on-surface-variant leading-relaxed">
+                {t("safety.noise_check_desc")}
+              </p>
+            </div>
+            <div className="bg-surface-container-low p-6 border-l-4 border-[#ba1a1a]">
+              <h3 className="font-sans font-bold text-sm uppercase text-[#ba1a1a] mb-3">
+                {t("safety.flammable_title")}
+              </h3>
+              <p className="font-mono text-xs text-on-surface-variant leading-relaxed">
+                {t("safety.flammable_desc")}
+              </p>
+            </div>
+            <div className="bg-surface-container-low p-6 border-l-4 border-[#FFCE00]">
+              <h3 className="font-sans font-bold text-sm uppercase text-[#FFCE00] mb-3">
+                {t("safety.remote_warning_title")}
+              </h3>
+              <p className="font-mono text-xs text-on-surface-variant leading-relaxed">
+                {t("safety.remote_warning_desc")}
+              </p>
+            </div>
+            <div className="bg-surface-container-low p-6 border-l-4 border-[#FFCE00]">
+              <h3 className="font-sans font-bold text-sm uppercase text-[#FFCE00] mb-3">
+                {t("safety.water_cooling_title")}
+              </h3>
+              <p className="font-mono text-xs text-on-surface-variant leading-relaxed">
+                {t("safety.water_cooling_desc")}
+              </p>
+            </div>
+            <div className="bg-surface-container-low p-6 border-l-4 border-[#ba1a1a]">
+              <h3 className="font-sans font-bold text-sm uppercase text-[#ba1a1a] mb-3">
+                {t("safety.grounding_title")}
+              </h3>
+              <p className="font-mono text-xs text-on-surface-variant leading-relaxed">
+                {t("safety.grounding_desc")}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Emergency Stop Procedure */}
+        <section className="bg-error-container/20 p-8 border-l-4 border-[#ba1a1a]">
+          <h3 className="font-sans font-bold text-lg uppercase text-[#ba1a1a] mb-4 flex items-center gap-2">
+            <AlertOctagon className="h-5 w-5" />
+            {t("safety.emergency_title")}
+          </h3>
+          <p className="font-mono text-sm text-on-surface-variant leading-relaxed">
+            {t("safety.emergency_desc")}
+          </p>
+        </section>
       </div>
     </div>
   );

@@ -203,6 +203,42 @@ export default function SupportPage() {
           </div>
         </div>
 
+        {/* Additional Safety Warnings */}
+        <section className="grid gap-4 md:grid-cols-2">
+          <div className="bg-surface-container-low p-6 border-l-4 border-[#ba1a1a]">
+            <h3 className="font-sans font-bold text-sm uppercase text-[#ba1a1a] mb-3">
+              {t("safety.breathe_title")}
+            </h3>
+            <p className="font-mono text-xs text-on-surface-variant">
+              {t("safety.breathe_desc")}
+            </p>
+          </div>
+          <div className="bg-surface-container-low p-6 border-l-4 border-[#ba1a1a]">
+            <h3 className="font-sans font-bold text-sm uppercase text-[#ba1a1a] mb-3">
+              {t("safety.skin_contact_title")}
+            </h3>
+            <p className="font-mono text-xs text-on-surface-variant">
+              {t("safety.skin_contact_desc")}
+            </p>
+          </div>
+          <div className="bg-surface-container-low p-6 border-l-4 border-[#FFCE00]">
+            <h3 className="font-sans font-bold text-sm uppercase text-[#FFCE00] mb-3">
+              {t("safety.hearing_title")}
+            </h3>
+            <p className="font-mono text-xs text-on-surface-variant">
+              {t("safety.hearing_desc")}
+            </p>
+          </div>
+          <div className="bg-surface-container-low p-6 border-l-4 border-[#FFCE00]">
+            <h3 className="font-sans font-bold text-sm uppercase text-[#FFCE00] mb-3">
+              {t("safety.flammable_title")}
+            </h3>
+            <p className="font-mono text-xs text-on-surface-variant">
+              {t("safety.flammable_desc")}
+            </p>
+          </div>
+        </section>
+
         {/* Lifecycle Timeline */}
         <section className="flex flex-col gap-12">
           <div className="flex items-center gap-4 border-b-4 border-on-surface pb-4">
@@ -579,6 +615,71 @@ export default function SupportPage() {
             <p className="font-mono text-sm text-on-surface-variant">
               {t("support.warranty_desc")}
             </p>
+          </div>
+        </section>
+
+        {/* Cooler Maintenance */}
+        <section className="bg-surface-container-low p-8 border-l-4 border-[#FFCE00]">
+          <h3 className="font-sans font-bold text-lg uppercase text-on-surface mb-4">
+            {t("cooler.title")}
+          </h3>
+          <ul className="space-y-3 font-mono text-sm text-on-surface-variant">
+            <li className="flex gap-2">
+              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 bg-[#FFCE00]" />
+              <span>{t("cooler.frequency")}: {t("cooler.clean_interval")}</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 bg-[#FFCE00]" />
+              <span>{t("cooler.method_air")}</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 bg-[#FFCE00]" />
+              <span>{t("cooler.method_diesel")}</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 bg-[#ba1a1a]" />
+              <span>{t("cooler.harsh_env")}</span>
+            </li>
+          </ul>
+        </section>
+
+        {/* PDF Downloads */}
+        <section className="bg-surface-container-high p-8 border-l-4 border-outline-variant">
+          <h3 className="font-sans font-bold text-lg uppercase text-on-surface mb-4 flex items-center gap-2">
+            <Download className="h-5 w-5 text-[#FFCE00]" />
+            {t("download.manual")}
+          </h3>
+          <div className="grid gap-4 md:grid-cols-2">
+            <a
+              href="/2025-CN.pdf"
+              download="DSNE-AIR-说明书-2025.pdf"
+              className="flex items-center justify-between p-4 bg-surface-container-low hover:bg-surface transition-colors border border-outline group"
+            >
+              <div>
+                <p className="font-mono font-bold text-sm text-on-surface group-hover:text-[#FFCE00] transition-colors">
+                  {t("download.chinese")}
+                </p>
+                <p className="font-mono text-xs text-on-surface-variant mt-1">
+                  PDF • 1.2 MB
+                </p>
+              </div>
+              <Download className="h-5 w-5 text-on-surface-variant group-hover:text-[#FFCE00] transition-colors" />
+            </a>
+            <a
+              href="/2025-EN.pdf"
+              download="DSNE-AIR-Instruction-Manual-2025.pdf"
+              className="flex items-center justify-between p-4 bg-surface-container-low hover:bg-surface transition-colors border border-outline group"
+            >
+              <div>
+                <p className="font-mono font-bold text-sm text-on-surface group-hover:text-[#FFCE00] transition-colors">
+                  {t("download.english")}
+                </p>
+                <p className="font-mono text-xs text-on-surface-variant mt-1">
+                  PDF • 1.4 MB
+                </p>
+              </div>
+              <Download className="h-5 w-5 text-on-surface-variant group-hover:text-[#FFCE00] transition-colors" />
+            </a>
           </div>
         </section>
       </div>
